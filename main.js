@@ -4,7 +4,7 @@ const tc = require('@actions/tool-cache');
 const { Octokit } = require("@octokit/rest");
 
 const baseDownloadURL = "https://github.com/trinitronx/doctl/releases/download";
-const fallbackVersion = "1.101.0-pre.git.69cd972159a0";
+const fallbackVersion = "1.101.0-pre.git.f747827eb8e6";
 const octokit = new Octokit();
 
 async function downloadDoctl(version, type, architecture) {
@@ -55,7 +55,7 @@ async function run() {
     var version = core.getInput('version');
     if ((!version) || (version.toLowerCase() === 'latest')) {
         version = await octokit.repos.getLatestRelease({
-            owner: 'digitalocean',
+            owner: 'trinitronx',
             repo: 'doctl'
         }).then(result => {
             return result.data.name;
