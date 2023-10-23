@@ -17460,8 +17460,8 @@ const exec = __nccwpck_require__(1514);
 const tc = __nccwpck_require__(7784);
 const { Octokit } = __nccwpck_require__(5375);
 
-const baseDownloadURL = "https://github.com/digitalocean/doctl/releases/download";
-const fallbackVersion = "1.98.1";
+const baseDownloadURL = "https://github.com/trinitronx/doctl/releases/download";
+const fallbackVersion = "1.101.0-pre.git.f747827eb8e6";
 const octokit = new Octokit();
 
 async function downloadDoctl(version, type, architecture) {
